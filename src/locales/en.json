@@ -1,0 +1,40 @@
+{
+  "SUCCESS": {
+    "EMAIL_SEND": {
+      "CONTACT": "E-mail successfully sent"
+    },
+    "REGISTER": {
+      "REGISTER_SUCCESS": "User created successfully",
+      "VERIFICATION_EMAIL": "We send an email with instructions to activate your account",
+      "RESET_PASSWORD_EMAIL": "We send an email with instructions to reset your password",
+      "RESET_PASSWORD": "Your password has been changed successfully.",
+      "EMAIL_VERIFIED": "Your account was successfully activated."
+    },
+    "LOGIN": "You were logged in successfully.",
+    "LOGOUT": "You have been successfully lifted."
+  },
+  
+  "ERROR": {
+    "TOKEN": {
+      "EXPIRED": "Token Expired",
+      "INVALID": "invalid token",
+      "NOT_FOUND": "Token not informed"
+    },
+    "FIELD": {
+      "REQUIRED": "The field: {field} is required",
+      "INVALID": "The field: {field} is invalid",
+      "INVALID_OR_REQUIRED": "The field: {field} is empty or invalid "
+    },
+    "USER": {
+      "NOT_FOUND": "User not found",
+      "PASSWORD_NOT_MATCHING": "Passwords are not corresponding"
+    },
+    "HTTP": {
+      "UNAUTHORIZED": "Unauthorized",
+      "UNAUTHORIZED_MESSAGE": "You are not allowed to access this page",
+      "NOT_FOUND": "Not Found",
+      "NOT_FOUND_MESSAGE": "It was not possible to find the requested feature",
+      "SERVER_ERROR": "Server Error. Try again later"
+    }
+  }
+}
