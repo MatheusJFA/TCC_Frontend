@@ -6,7 +6,7 @@
 			style="min-height: 75vh;">
 			<div
 				class="absolute top-0 w-full h-full bg-center bg-cover"
-				style='background-image:url("/assets/images/bg-pattern.png");'>
+				style='background-image:url("/assets/images/bacground-green-leafs.jpg");'>
 				<span
 					id="blackOverlay"
 					class="w-full h-full absolute opacity-75 bg-stone-900"></span>
@@ -330,10 +330,10 @@ export default defineComponent({
 				clearContactInformation();
 			}
 		}
-		
+
 		onMounted(() => {
 			localStorage.removeItem("refreshToken");
-            localStorage.removeItem("accessToken");
+			localStorage.removeItem("accessToken");
 		});
 
 		function clearContactInformation() {

@@ -55,17 +55,17 @@
 					<div v-show="selectedExercise.name == ''"
 						class="mx-auto max-w-2xl px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-4">
 						<div class="mt-4 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-							<div class="group relative grid shadow-md rounded-md" v-for="item in exercises" :key="item.id">
+							<div class="group relative grid shadow-md rounded-md bg-white" v-for="item in exercises" :key="item.id">
 								<h2
 									class="text-lg capitalize font-bold py-2 bg-leafgreen-900  text-center rounded-tr-md rounded-tl-md text-leafgreen-100">
 									{{ item.name }}
 								</h2>
 								<div
-									class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+									class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-white group-hover:opacity-75 lg:aspect-none lg:h-80">
 									<img :src="item.gifUrl" :alt="item.name" @click="selectedExercise = item"
 										class="h-full w-full object-cover object-center lg:h-full lg:w-full">
 								</div>
-								<div class="mt-4 flex justify-between">
+								<div class="border-t bg-white">
 									<div class="flex w-full px-2 flex-col">
 										<p class="text-sm my-2 font-bold capitalize text-gray-900">Body part: {{
 												item.bodyPart
@@ -77,7 +77,7 @@
 											</span>
 											{{ item.target }}
 										</p>
-										<p class="mt-1 text-sm my-1 capitalize text-gray-500">
+										<p class="mt-1 mb-2 text-sm  capitalize text-gray-500">
 											<span class="font-bold">Equipment:</span>
 											{{ item.equipment }}
 										</p>
