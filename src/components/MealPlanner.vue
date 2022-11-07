@@ -13,7 +13,7 @@
 							<XMarkIcon class="w-6 h-6 text-white" />
 						</button>
 					</div>
-					<div class="flex flex-row ">
+					<div class="flex flex-col lg:flex-row ">
 						<div class="flex flex-col shadow-md rounded-br-md rounded-bl-md">
 							<div class="flex flex-col py-2 rounded-tr-md rounded-tl-md bg-green-600 ">
 								<h2 class="text-lg text-center capitalize font-bold text-green-100">
@@ -65,7 +65,7 @@
 					</div>
 
 					<!-- Ingrediente -->
-					<div class="flex md:flex-col lg:flex-row w-full pt-4">
+					<div class="flex flex-col lg:flex-row w-full pt-4">
 						<div class="md:w-full lg:w-6/12">
 							<div class="w-full border mb-4 rounded-md shadow-md"
 								v-for="ingredient in recipe.data.extendedIngredients" :key="ingredient.id">
@@ -94,7 +94,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="md:w-full lg:w-6/12  pl-4">
+						<div class="md:w-full lg:w-6/12  lg:pl-4">
 							<!-- Summary -->
 							<div class="text-justify p-4 bg-gray-200 rounded-md shadow-md">
 								<p>
@@ -142,35 +142,34 @@
 					<div class="w-full pt-4">
 						<div>
 							<span class="font-bold">Nutrition Information</span>
-							<iframe id="previewWidget" class="w-full min-h-screen"></iframe>
+							<iframe id="previewWidget" class="flex flex-row w-full min-h-screen">
+
+							</iframe>
 						</div>
 
 
-						<div
-							class="relative w-full flex flex-col min-w-0 break-words bg-slate-50 rounded-lg mb-6 xl:mb-0 shadow-lg">
-							<span class="font-bold">Similar Recipes</span>
-							<div class="mx-auto max-w-2xl px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-4">
-								<div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8"
-									v-for="item in similarRecipes.data" :key="item.id">
-									<div class="shadow-md grid rounded-md">
-										<div class="flex flex-col ">
-											<h2
-												class="text-lg text-center bg-green-600 p-3 capitalize rounded-tr-md rounded-tl-md font-bold text-leafgreen-200">
-												{{ item.id }} - {{ item.title }}
-											</h2>
-										</div>
-										<div
-											class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
-											<a :href="item.sourceUrl" target="_blank">
-												<img :src="`https://spoonacular.com/recipeImages/${item.id}-556x370.${item.imageType}`"
-													:alt="item.name"
-													class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-											</a>
-										</div>
-										<div>
-											<p> <span>Servings: </span>{{ item.servings }}</p>
-											<p> <span>Ready in </span>{{ item.readyInMinutes }} <span>minutes</span></p>
-										</div>
+
+						<div class="mx-auto max-w-2xl px-4 sm:py-4 md:px-0 sm:px-6 lg:max-w-7xl lg:px-0">
+							<span class="font-bold ">Similar Recipes</span>
+							<div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+								<div class="shadow-md grid rounded-md" v-for="item in similarRecipes.data" :key="item.id">
+									<div class="flex flex-col bg-green-600 rounded-tr-md rounded-tl-md">
+										<h2
+											class="text-lg text-center  p-3 capitalize font-bold text-leafgreen-200">
+											{{ item.id }} - {{ item.title }}
+										</h2>
+									</div>
+									<div
+										class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+										<a :href="item.sourceUrl" target="_blank">
+											<img :src="`https://spoonacular.com/recipeImages/${item.id}-556x370.${item.imageType}`"
+												:alt="item.name"
+												class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
+										</a>
+									</div>
+									<div>
+										<p> <span>Servings: </span>{{ item.servings }}</p>
+										<p> <span>Ready in </span>{{ item.readyInMinutes }} <span>minutes</span></p>
 									</div>
 								</div>
 							</div>
@@ -201,7 +200,7 @@
 										</h2>
 									</div>
 									<div
-										class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+										class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden  bg-white group-hover:opacity-75 lg:aspect-none lg:h-80">
 										<img
 											:src="`https://spoonacular.com/recipeImages/${JSON.parse(item.value).id}-556x370.${JSON.parse(item.value).imageType}`"
 											:alt="item.name"
@@ -269,7 +268,7 @@ export default defineComponent({
 			recipe.value.data.extendedIngredients.forEach((element: any) => {
 				names.push(element.name)
 			});
-			
+
 			var postContent = names.join("\n");
 			var servings = recipe.value.data.servings;
 

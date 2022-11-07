@@ -76,16 +76,15 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="w-full flex lg:w-6/12 xl:w-6/12 px-4 pt-4">
 				<div
 					class="relative w-full flex flex-col min-w-0 break-words bg-white rounded-lg mb-6 xl:mb-0 shadow-lg">
-					<div class="flex-auto p-4">
-						<div class="flex flex-wrap">
-							<div class="relative flex flex-col w-full ">
-								<h3 class="text-center uppercase font-bold text-xl">
-									Your Maintenance Daily Calories
-								</h3>
-								<div class="flex flex-col">
+					<div class="flex h-full p-4">
+						<div class="flex h-full w-full flex-wrap">
+							<h3 class="text-center uppercase w-full font-bold text-xl"> Your Maintenance Daily Calories </h3>
+							<div class="relative flex flex-col h-full w-full">
+								<div class="flex lg:justify-center h-full flex-col">
 									<div v-for="item in healthData.MNC" :key="item.text"
 										class="flex flex-row justify-between py-2">
 										<div>
