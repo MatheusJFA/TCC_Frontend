@@ -7,11 +7,9 @@
 			<!-- Header -->
 			<div class="relative bg-green-500 md:pt-32 pb-32 pt-12">
 			</div>
-
 			<div class="px-4 md:px-10 mx-auto w-full -m-24">
 				<header class="relative pb-10 flex">
 					<p class="text-sm text-white pr-5">Level: {{ experience.level }}</p>
-
 					<p class="text-sm text-white">
 						{{ `${experience.currentLevelRequiredExperience} xp` }}
 					</p>
@@ -27,21 +25,18 @@
 						{{ `${experience.forNextLevel} xp` }}
 					</p>
 				</header>
-
 				<!-- Routes -->
-
 				<Nutrition v-show="currentRoute === ''" />
 				<Exercise v-show="currentRoute === 'exercise'" />
 				<MealPlanner v-show="currentRoute === 'mealPlan'" />
 				<!-- <Chat v-show="currentRoute === 'chat'" /> -->
-				
 				<!-- Footer -->
 				<footer class="block py-4">
 					<div class="container mx-auto px-4">
 						<hr class="mb-4 border-b-1 border-blueGray-200" />
 						<div class="flex flex-wrap items-center md:justify-between justify-center">
 							<div class="w-full md:w-6/12 px-4">
-								<div class="text-sm text-blueGray-500 font-semibold py-1">
+								<div class="text-sm text-gray-500 font-semibold py-1">
 									Copyright © {{ date }} Celson Fernando & Matheus José
 								</div>
 							</div>

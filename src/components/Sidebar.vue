@@ -21,7 +21,8 @@
 				</li>
 			</ul>
 			<!-- Collapse -->
-			<div class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded"
+			<div
+				class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded"
 				:class="classesSidebar.collapseShow">
 				<!-- Collapse header -->
 				<div class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-gray-200">
@@ -44,26 +45,32 @@
 				<!-- Navigation -->
 				<ul class="md:flex-col md:min-w-full flex flex-col list-none">
 
-					<li>
-						<button @click="$emit('selectRoute', '')"
-							class="text-gray-700 hover:text-gray-500  text-xs uppercase py-3 font-bold block">
-							<i class="fas fa-tv opacity-75 mr-2 text-sm"></i>
-							Nutrition
-						</button>
+					<li class=" cursor-pointer">
+						<div class="flex w-full" @click="$emit('selectRoute', '')">
+							<button
+								class="text-gray-700 hover:text-gray-500 text-xs uppercase py-3 font-bold flex flex-row items-center">
+								<img src="/assets/icons/nutricao_sidebar.svg" alt="Exercícios" class="pr-3" />
+								Nutrition
+							</button>
+						</div>
 					</li>
-					<li>
-						<button @click="$emit('selectRoute', 'exercise')"
-							class="text-gray-700 hover:text-gray-500 text-xs uppercase py-3 font-bold block">
-							<i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-							Exercise
-						</button>
+					<li class="cursor-pointer">
+						<div class="flex w-full" @click="$emit('selectRoute', 'exercise')">
+							<button
+								class="text-gray-700 hover:text-gray-500 text-xs uppercase py-3 font-bold flex flex-row items-center">
+								<img src="/assets/icons/fitness_center_sidebar.svg" alt="Exercícios" class="pr-3 fill-slate-900" />
+								Exercise
+							</button>
+						</div>
 					</li>
-					<li>
-						<button @click="$emit('selectRoute', 'mealPlan')"
-							class="text-gray-700 hover:text-gray-500 text-xs uppercase py-3 font-bold block">
-							<i class="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>
-							Meal Plan
-						</button>
+					<li class=" cursor-pointer">
+						<div class="flex w-full" @click="$emit('selectRoute', 'mealPlan')">
+							<button
+								class="text-gray-700 hover:text-gray-500 text-xs uppercase py-3 font-bold flex flex-row items-center">
+								<img src="/assets/icons/calendar.svg" alt="Meal Plan" class="pr-3 w-9 h-6">
+								Meal Plan
+							</button>
+						</div>
 					</li>
 					<!-- <li class="items-center">
 						<button @click="$emit('selectRoute', 'chat')"
