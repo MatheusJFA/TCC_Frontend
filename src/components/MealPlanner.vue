@@ -24,8 +24,7 @@
 							</div>
 							<div
 								class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden  bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
-								<img
-									:src="`https://spoonacular.com/recipeImages/${JSON.parse(selectedRecipe.value).id}-556x370.${JSON.parse(selectedRecipe.value).imageType}`"
+								<img :src="`https://spoonacular.com/recipeImages/${JSON.parse(selectedRecipe.value).id}-556x370.${JSON.parse(selectedRecipe.value).imageType}`"
 									:alt="selectedRecipe.name"
 									class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
 							</div>
@@ -152,10 +151,10 @@
 						<div class="mx-auto max-w-2xl px-4 sm:py-4 md:px-0 sm:px-6 lg:max-w-7xl lg:px-0">
 							<span class="font-bold ">Similar Recipes</span>
 							<div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-								<div class="shadow-md grid rounded-md" v-for="item in similarRecipes.data" :key="item.id">
+								<div class="shadow-md grid rounded-md" v-for="item in similarRecipes.data"
+									:key="item.id">
 									<div class="flex flex-col bg-green-600 rounded-tr-md rounded-tl-md">
-										<h2
-											class="text-lg text-center  p-3 capitalize font-bold text-leafgreen-200">
+										<h2 class="text-lg text-center  p-3 capitalize font-bold text-leafgreen-200">
 											{{ item.id }} - {{ item.title }}
 										</h2>
 									</div>
@@ -175,11 +174,13 @@
 							</div>
 						</div>
 					</div>
+					<p class="font-weight-700">Resources made available by RapidAPI (Spoonacular)</p>
+
 				</div>
 
 
-				<div v-else class="relative w-full flex flex-col min-w-0 break-words
-				bg-slate-50 rounded-lg mb-6 xl:mb-0 shadow-lg">
+				<div v-else
+					class="relative w-full flex flex-col min-w-0 break-words bg-slate-50 rounded-lg mb-6 xl:mb-0 shadow-lg">
 					<div class="mx-auto max-w-2xl px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-4">
 						<div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8"
 							v-for="planner in mealPlanner" :key="planner">
@@ -201,8 +202,7 @@
 									</div>
 									<div
 										class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden  bg-white group-hover:opacity-75 lg:aspect-none lg:h-80">
-										<img
-											:src="`https://spoonacular.com/recipeImages/${JSON.parse(item.value).id}-556x370.${JSON.parse(item.value).imageType}`"
+										<img :src="`https://spoonacular.com/recipeImages/${JSON.parse(item.value).id}-556x370.${JSON.parse(item.value).imageType}`"
 											:alt="item.name"
 											class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
 									</div>
@@ -215,6 +215,7 @@
 							</div>
 						</div>
 					</div>
+					<p class="font-bold">Resources available in RapidAPI (Spoonacular)</p>
 				</div>
 			</div>
 		</div>
