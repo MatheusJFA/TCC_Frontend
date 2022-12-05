@@ -165,7 +165,7 @@
 							</div>
 						</div>
 					</div>
-					<p class="font-bold">Resources available in RapidAPI (ExerciseDB)</p>
+					<p class="font-bold">Resources available in RapidAPI (<a href="https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb" target="_blank">ExerciseDB</a>)</p>
 				</div>
 			</div>
 		</div>

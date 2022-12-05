@@ -174,8 +174,7 @@
 							</div>
 						</div>
 					</div>
-					<p class="font-weight-700">Resources made available by RapidAPI (Spoonacular)</p>
-
+					<p class="font-bold">Resources available in RapidAPI (<a href="https://rapidapi.com/spoonacular/api/recipe-food-nutrition/" target="_blank">Spoonacular</a>)</p>
 				</div>
 
 
@@ -215,7 +214,7 @@
 							</div>
 						</div>
 					</div>
-					<p class="font-bold">Resources available in RapidAPI (Spoonacular)</p>
+					<p class="font-bold">Resources available in RapidAPI (<a href="https://rapidapi.com/spoonacular/api/recipe-food-nutrition/" target="_blank">Spoonacular</a>)</p>
 				</div>
 			</div>
 		</div>
